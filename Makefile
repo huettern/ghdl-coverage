@@ -1,6 +1,6 @@
 
 # Specify target
-PROJECT = adder
+PROJECT = fifo_8i_32o
 
 ################################################################################
 # Defs
@@ -24,8 +24,8 @@ GHDL_ELAB = ghdl -e --workdir=. -Wl,-lgcov
 GHDL_RUN = ghdl -r --workdir=.
 
 GCOV = gcov
-LCOV = lcov -c
-GENHTML = genhtml
+LCOV = lcov -c --rc lcov_branch_coverage=1
+GENHTML = genhtml --rc genhtml_branch_coverage=1
 RM = rm -rf
 
 ################################################################################
@@ -41,7 +41,7 @@ run: $(TB)
 $(TB) : $(OBJS)
 	cd $(BUILD)/ && $(GHDL_ELAB) $@
 
-# GHDL_COV_FLGAS Flags only if not tb file
+# GHDL_COV_FLGAS only if not tb file
 cov_flags=$(if $(findstring _tb,$(1)),,$(GHDL_COV_FLGAS))
 $(OBJS) : $(SRCS)
 	cd $(BUILD)/ && $(GHDL_ANALYZE) $(call cov_flags,$(notdir $@)) ../$(addprefix $(PROJ_DIR)/$(PROJECT)/,$(notdir $(patsubst %.o,%.vhd,$@)))

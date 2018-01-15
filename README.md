@@ -1,8 +1,20 @@
 # ghdl-coverage
+This repository aims to use ghdl to simulate VHDL code and report code coverage.
+
+Code Coverage Metrics:
+- [x] Statement Coverage -> "Lines"
+- [x] Branch Coverage -> "Branches"
+- [ ] Condition Coverage
+- [ ] Expression Coverage
+- [ ] Toggle Coverage
+
 ## Setup
+### Requirements
 ```bash
-# Requirements
 apt install gnat build-essential libmpc-dev flex bison libz-dev lcov
+```
+### Download and install ghdl and gcc
+```bash
 # Download ghdl
 wget https://github.com/ghdl/ghdl/archive/v0.35.tar.gz
 tar -xvzf v0.35.tar.gz
@@ -25,6 +37,11 @@ make install
 ```
 
 ## Usage
+Change the ```PROJECT``` variable in Makefile to the project you want to run and then run
+```bash
+make
+```
+Output is stored in the build directory.
 
 ## Example
 Full adder example from [here](https://blog.brixandersen.dk/2016/12/29/ghdl-gcov/) using code from [here](http://ghdl.readthedocs.io/en/latest/using/QuickStartGuide.html)
