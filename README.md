@@ -7,6 +7,8 @@ Code Coverage Metrics:
 - [ ] Condition Coverage
 - [ ] Expression Coverage
 - [ ] Toggle Coverage
+- [ ] Finite State Machine (FSM) Coverage
+- [ ] Toggle Coverage
 
 ## Setup
 ### Requirements
