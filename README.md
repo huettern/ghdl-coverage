@@ -48,9 +48,9 @@ Output is stored in the build directory.
 ## Projects
 
 | Name | Description | Coverage Report |
-| ==== | :========== | :============== |
-| adder | A simple full adder | [adder](https://noah95.github.io/ghdl-coverage/adder/)
-| fifo_8i_32o | 8 to 32 bit FiFo | [fifo_8i_32o](https://noah95.github.io/ghdl-coverage/fifo_8i_32o/)
+| ---- | :---------- | :-------------- |
+| adder | A simple full adder | [adder](https://noah95.github.io/ghdl-coverage/adder/) |
+| fifo_8i_32o | 8 to 32 bit FiFo | [fifo_8i_32o](https://noah95.github.io/ghdl-coverage/fifo_8i_32o/) |
 
 ## Manual
 Full adder example from [here](https://blog.brixandersen.dk/2016/12/29/ghdl-gcov/) using code from [here](http://ghdl.readthedocs.io/en/latest/using/QuickStartGuide.html)
